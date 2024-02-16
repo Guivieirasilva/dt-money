@@ -6,15 +6,39 @@
       "type": "income",
       "category": "Venda",
       "price": 14000,
-      "cratedAt": "2024-02-14T04:01:02.874Z"
+      "createdAt": "2024-02-14T04:01:02.874Z"
     },
     {
-      "id": 1,
+      "id": 2,
       "description": "Hamburger",
       "type": "outcome",
       "category": "Alimentação",
       "price": 4000,
-      "cratedAt": "2024-02-14T04:10:02.874Z"
+      "createdAt": "2024-02-14T04:10:02.874Z"
+    },
+    {
+      "id": 3,
+      "price": 1200,
+      "description": "Compras",
+      "category": "Gastos",
+      "type": "outcome",
+      "createdAt": "2024-02-14T04:10:02.874Z"
+    },
+    {
+      "category": "Desenvolvimento",
+      "description": "Desenvolvimento de app",
+      "price": 1500,
+      "type": "income",
+      "createdAt": "2024-02-16T13:41:49.387Z",
+      "id": 4
+    },
+    {
+      "category": "Alimentação",
+      "description": "Pastel",
+      "price": 5,
+      "type": "outcome",
+      "createdAt": "2024-02-16T14:42:57.310Z",
+      "id": 5
     }
   ]
 }
