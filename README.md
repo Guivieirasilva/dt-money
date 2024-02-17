@@ -8,7 +8,7 @@ Este repositório contém a solução para o segundo desafio da trilha de ReactJ
 
 [layout - Figma](https://www.figma.com/file/7cK8AorvpelkuopAHVhVyu/DT-Money-(Community)?type=design&node-id=42020-1622&mode=design&t=BO4dkQ3mjpZYupI8-0)
 
-![Capa do Projeto]()
+![Capa](https://github.com/Guivieirasilva/dt-money/assets/95317866/2831263d-a916-438a-bc43-ed15ce81166d)
 
 ### Funcionalidades Implementadas:
 
