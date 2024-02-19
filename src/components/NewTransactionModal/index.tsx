@@ -12,6 +12,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 import { useContextSelector } from 'use-context-selector'
+import { useEffect } from 'react'
 
 const newTransactionFormSchema = z.object({
   price: z.number(),
@@ -23,27 +24,46 @@ const newTransactionFormSchema = z.object({
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
 export function NewTrasactionModal() {
+  const [createTransaction, editTransaction, transactionToEdit] =
+    useContextSelector(TransactionsContext, (context) => {
+      return [
+        context.createTransaction,
+        context.editTransaction,
+        context.transactionToEdit,
+      ]
+    })
+
   const {
     control,
     register,
     reset,
     handleSubmit,
+    setValue,
     formState: { isSubmitting },
   } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormSchema),
   })
 
-  const createTransaction = useContextSelector(
-    TransactionsContext,
-    (context) => {
-      return context.createTransaction
-    },
-  )
-
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
     createTransaction(data)
     reset()
   }
+
+  async function handleEditTransaction(data: NewTransactionFormInputs) {
+    editTransaction(data)
+    reset()
+  }
+
+  useEffect(() => {
+    if (transactionToEdit) {
+      setValue('description', transactionToEdit.description)
+      setValue('price', transactionToEdit.price)
+      setValue('category', transactionToEdit.category)
+      setValue('type', transactionToEdit.type)
+    } else {
+      reset()
+    }
+  }, [setValue, transactionToEdit, reset])
 
   return (
     <Dialog.Portal>
@@ -53,8 +73,18 @@ export function NewTrasactionModal() {
           <X size={24} />
         </CloseButton>
 
-        <Dialog.Title>Nova Transação</Dialog.Title>
-        <form action="" onSubmit={handleSubmit(handleCreateNewTransaction)}>
+        <Dialog.Title>
+          {' '}
+          {transactionToEdit ? 'Editar Transação' : 'Nova Transação'}
+        </Dialog.Title>
+        <form
+          action=""
+          onSubmit={handleSubmit(
+            transactionToEdit
+              ? handleEditTransaction
+              : handleCreateNewTransaction,
+          )}
+        >
           <input
             type="text"
             placeholder="Descrição"
@@ -81,7 +111,10 @@ export function NewTrasactionModal() {
             name="type"
             render={({ field }) => {
               return (
-                <TransactionType onValueChange={field.onChange}>
+                <TransactionType
+                  defaultValue={transactionToEdit?.type}
+                  onValueChange={field.onChange}
+                >
                   <TransactionTypeButton variant="income" value="income">
                     <ArrowCircleUp size={24} />
                     Entrada
