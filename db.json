@@ -6,7 +6,8 @@
       "type": "income",
       "category": "Venda",
       "price": 14000,
-      "createdAt": "2024-02-14T04:01:02.874Z"
+      "createdAt": "2024-02-14T04:01:02.874Z",
+      "updatedAt": "2024-02-14T04:10:02.874Z"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "type": "outcome",
       "category": "Alimentação",
       "price": 4000,
-      "createdAt": "2024-02-14T04:10:02.874Z"
+      "createdAt": "2024-02-14T04:10:02.874Z",
+      "updatedAt": "2024-02-14T04:10:02.874Z"
     },
     {
       "id": 3,
@@ -22,23 +24,35 @@
       "description": "Compras",
       "category": "Gastos",
       "type": "outcome",
-      "createdAt": "2024-02-14T04:10:02.874Z"
+      "createdAt": "2024-02-14T04:10:02.874Z",
+      "updatedAt": "2024-02-14T04:10:02.874Z"
     },
     {
+      "id": 4,
       "category": "Desenvolvimento",
       "description": "Desenvolvimento de app",
       "price": 1500,
       "type": "income",
       "createdAt": "2024-02-16T13:41:49.387Z",
-      "id": 4
+      "updatedAt": "2024-02-14T04:10:02.874Z"
     },
     {
       "category": "Alimentação",
-      "description": "Pastel",
-      "price": 5,
-      "type": "outcome",
-      "createdAt": "2024-02-16T14:42:57.310Z",
+      "description": "Feira",
+      "price": 10000,
+      "type": "income",
+      "createdAt": "2024-02-18T23:28:02.088Z",
+      "updatedAt": "2024-02-14T04:10:02.874Z",
       "id": 5
+    },
+    {
+      "category": "Ganhos",
+      "description": "Trabalho",
+      "price": 1350,
+      "type": "income",
+      "createdAt": "2024-02-19T04:27:14.204Z",
+      "updatedAt": "",
+      "id": 6
     }
   ]
 }
