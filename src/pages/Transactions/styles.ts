@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as RadioGroup from '@radix-ui/react-radio-group'
 
 export const TransactionsContainer = styled.section`
   width: 100%;
@@ -16,6 +17,8 @@ export const TransactionsTable = styled.table`
   td {
     padding: 1.25rem 2rem;
     background: ${({ theme }) => theme['gray-700']};
+    cursor: pointer;
+    text-align: center;
 
     &:first-child {
       border-top-left-radius: 6px;
@@ -26,6 +29,14 @@ export const TransactionsTable = styled.table`
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
     }
+  }
+
+  .selected-transaction {
+    outline: 2px solid ${({ theme }) => theme['green-500']};
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 `
 
@@ -38,4 +49,30 @@ export const PriceHighlight = styled.span<PriceHighlightProps>`
     props.variant === 'income'
       ? props.theme['green-300']
       : props.theme['red-300']};
+`
+
+export const RadioTransaction = styled(RadioGroup.Item)`
+  background-color: ${({ theme }) => theme.white};
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: ${({ theme }) => theme['gray-300']};
+
+  .indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: ${({ theme }) => theme['green-700']};
+    }
+  }
 `
