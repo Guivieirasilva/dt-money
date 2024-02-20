@@ -129,7 +129,7 @@ export function NewTrasactionModal() {
           />
 
           <button type="submit" disabled={isSubmitting}>
-            Cadastrar
+            {transactionToEdit ? 'Editar' : 'Cadastrar'}
           </button>
         </form>
       </Content>

@@ -1,4 +1,5 @@
 import {
+  ButtonsGroup,
   EditTransactionButton,
   HeaderContainer,
   HeaderContent,
@@ -22,7 +23,7 @@ export function Header() {
     <HeaderContainer>
       <HeaderContent>
         <img src={logoImg} alt="" />
-        <div>
+        <ButtonsGroup>
           <Dialog.Root>
             <Dialog.Trigger asChild>
               <EditTransactionButton
@@ -43,7 +44,7 @@ export function Header() {
             </Dialog.Trigger>
             <NewTrasactionModal />
           </Dialog.Root>
-        </div>
+        </ButtonsGroup>
       </HeaderContent>
     </HeaderContainer>
   )

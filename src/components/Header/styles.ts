@@ -15,9 +15,18 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  > div {
-    display: flex;
-    gap: 1.25rem;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+`
+
+export const ButtonsGroup = styled.div`
+  display: flex;
+  gap: 1.25rem;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
   }
 `
 

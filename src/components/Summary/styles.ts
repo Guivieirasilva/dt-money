@@ -4,13 +4,22 @@ export const SummaryContainer = styled.section`
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 1rem 1.5rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
   margin-top: -5rem;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme['gray-700']};
+    border-radius: 6px;
+  }
 `
 
 interface SummaryCardProps {

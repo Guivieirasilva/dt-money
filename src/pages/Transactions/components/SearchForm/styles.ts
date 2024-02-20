@@ -45,5 +45,11 @@ export const SearchFormContainer = styled.form`
         color 0.2s,
         border-color 0.2s;
     }
+
+    @media screen and (max-width: 500px) {
+      span {
+        display: none;
+      }
+    }
   }
 `

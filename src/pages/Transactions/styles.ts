@@ -53,8 +53,9 @@ export const PriceHighlight = styled.span<PriceHighlightProps>`
 
 export const RadioTransaction = styled(RadioGroup.Item)`
   background-color: ${({ theme }) => theme.white};
-  width: 20px;
-  height: 20px;
+  border: 0;
+  width: 15px;
+  height: 15px;
   border-radius: 100%;
   color: ${({ theme }) => theme['gray-300']};
 
@@ -74,5 +75,15 @@ export const RadioTransaction = styled(RadioGroup.Item)`
       border-radius: 50%;
       background-color: ${({ theme }) => theme['green-700']};
     }
+  }
+`
+export const ScrollContainer = styled.section`
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme['gray-700']};
+    border-radius: 6px;
   }
 `
