@@ -2,8 +2,6 @@
 
 Este repositório contém a solução para o segundo desafio da trilha de ReactJS do Ignite by Rocketseat. O desafio consistiu no desenvolvimento de uma aplicação para controle financeiro pessoal, onde o usuário pode adicionar suas entradas e saídas financeiras do dia-a-dia, além de realizar filtragens por itens ou categorias específicas.
 
-[Vizualize o Projeto]()
-
 ### Layout do Projeto - Figma
 
 [layout - Figma](https://www.figma.com/file/7cK8AorvpelkuopAHVhVyu/DT-Money-(Community)?type=design&node-id=42020-1622&mode=design&t=BO4dkQ3mjpZYupI8-0)
@@ -47,10 +45,9 @@ Compreender esses conceitos é crucial para o desenvolvimento de aplicações Re
 ## Como Executar o Projeto:
 
 1. Clone o repositório: `git clone https://github.com/Guivieirasilva/dt-money.git`
-2. Instale as dependências: `npm install`
-3. Execute o projeto: `npm run dev`
-4. Acesse a aplicação no seu navegador: [http://localhost:3000/](http://localhost:3000/)
-
-Sinta-se à vontade para explorar o código-fonte, verificar as implementações e contribuir com melhorias. Espero que este desafio tenha sido enriquecedor e que você tenha consolidado seus conhecimentos em ReactJS. Se tiver alguma dúvida, fique à vontade para entrar em contato!
-
-Boa codificação! 🚀
+2. Navegue até a pasta do projeto com: `cd .\dt-money`
+3. Instale as dependências: `npm install`
+4. Execute o projeto: `npm run dev`
+5. Execute o servidor: `npm run dev:server`
+6. Acesse a aplicação no seu navegador: [http://localhost:3000/]
+(http://localhost:3000/)
